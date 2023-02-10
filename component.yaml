@@ -14,7 +14,7 @@ implementation:
           print('Hello World!')
 
       import argparse
-      _parser = argparse.ArgumentParser(prog='Hello world', description='')
+      _parser = argparse.ArgumentParser(prog='IT IS NOT WORKING', description='')
       _parsed_args = vars(_parser.parse_args())
 
       _outputs = hello_world(**_parsed_args)
