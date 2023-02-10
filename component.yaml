@@ -11,7 +11,7 @@ implementation:
       python3 -u "$program_path" "$@"
     - |
       def hello_world():
-          print('Hello World!')
+          print('IT IS NOT WORKING!')
 
       import argparse
       _parser = argparse.ArgumentParser(prog='IT IS NOT WORKING', description='')
