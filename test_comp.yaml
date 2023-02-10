@@ -1,0 +1,20 @@
+
+name: Hello world
+implementation:
+  container:
+    image: python:3.7
+    command:
+    - sh
+    - -ec
+    - |
+      program_path=$(mktemp)
+      printf "%s" "$0" > "$program_path"
+      python3 -u "$program_path" "$@"
+    - |
+      def hello_world():
+          print('IT IS NOT WORKING!')
+      import argparse
+      _parser = argparse.ArgumentParser(prog='IT IS NOT WORKING', description='')
+      _parsed_args = vars(_parser.parse_args())
+      _outputs = hello_world(**_parsed_args)
+    args: []
